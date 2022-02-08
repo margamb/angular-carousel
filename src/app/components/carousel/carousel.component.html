@@ -1,0 +1,18 @@
+<main class="carousel">
+  <div class="container">
+    <section class="carousel-wrapper">
+      <ul
+        class="carousel-inner"
+        [style.transform]="'translateX(' + widthCarousel + 'px)'"
+      >
+        <li *ngFor="let imageCarousel of imagesCarousel" class="carousel-item">
+          <a [href]="imageCarousel.href">
+            <img class="img" [src]="imageCarousel.url" />
+          </a>
+        </li>
+      </ul>
+      <app-button (click)="prev()" class="arrow-left"></app-button>
+      <app-button (click)="next()" class="arrow-right"></app-button>
+    </section>
+  </div>
+</main>
